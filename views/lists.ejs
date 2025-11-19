@@ -1,24 +1,39 @@
 <html lang="en">
 <head>
 <style>
-}
+
 </style>
 </head>
 
 <body>
 <h1>Current Users</h1>
-<% users.forEach(user=>{ %>
-    <div class="user">
-        <h3> First Name: <%= user.firstName %>
-        </h3>
-        <h3> Last Name: <%= user.lastName %>
-        </h3>
-        <h3> Gender: <%= user.gender %>
-        </h3>
-        <h3> Age: <%= user.age %>
-        </h3>
-    </div>
-<% }); %>
-</body>
 
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Gender</td>
+        <td>Age</td>
+    </tr>
+
+    <% users.forEach(user=>{ %>
+    <tr>
+        <td>
+            <%= user.firstName %>
+        </td>
+        <td>
+            <%= user.lastName %>
+        </td>
+        <td>
+            <%= user.gender %>
+        </td>
+        <td>
+            <%= user.age %>
+        </td>
+    </tr>
+    <% }); %>
+
+</table>
+
+</body>
 </html>
